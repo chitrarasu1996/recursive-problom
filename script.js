@@ -25,7 +25,12 @@ const sumOfDigits = (num) => {
 console.log(sumOfDigits(123));
 
 
-const fibonacci=()=>{
+
+const fibonacci=(n,prev1,prev2)=>{
+if(n===0){
+    return prev1+prev2
+}
+ return fibonacci(n-1,prev2,prev1+prev2)
 
 }
-fibonacci()
+console.log(fibonacci(5,0,1),"fib")
